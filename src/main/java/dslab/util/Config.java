@@ -49,7 +49,9 @@ public final class Config {
      * @throws NumberFormatException if the String cannot be parsed to an Integer
      */
     public int getInt(String key) {
-        return Integer.parseInt(getString(key));
+        String v = getString(key);
+        System.err.println("%%%%%%%%%%%%CONFIG: '" + key + "' -> '" + v + "'");
+        return Integer.parseInt(v);
     }
 
     public boolean containsKey(String key) {
